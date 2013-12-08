@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- (C) Iain R. Learmonth 2013. Made available under the terms of GNU GPL v2
+     or any later version at your option. -->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BiBTeX generator for Wikipedia entries">
+    <meta name="author" content="Iain R. Learmonth">
+
+    <title>Wikipedia BibTeX Generator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bibwiki.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="page-header">
+          <h1>Wikipedia BibTeX Generator</h1>
+        </div>
+        <p><b>IMPORTANT NOTE:</b> Most educators and professionals do not consider it appropriate to use tertiary sources such as encyclopedias as a sole source for any information—citing an encyclopedia as an important reference in footnotes or bibliographies may result in censure or a failing grade. Wikipedia articles should be used for background information, as a reference for correct terminology and search terms, and as a starting point for further research.</p>
+        <p class="lead">Enter the Wikipedia URL below:</p>
+    <p>
+        <form role="form">
+            <input type="text" value="http://en.wikipedia.org/wiki/Plagiarism" id="input" class="form-control">
+            <br>
+            <input onclick="updateBibtex();" class="btn btn-success" value="Go!" style="width:100%;"></form>
+            <br>
+            <textarea id="output" class="form-control" rows="10"></textarea></p>
+        </form>
+        <p id="sample"></p>
+        <h2>Advanced Options</h2>
+        <p>Choose URL package to use: <select id="urlpackage" onchange="updateBibtex();"><option value="url">url or hyperref</option><option value="texttt">None</option></select></p>
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">&copy Iain R. Learmonth 2013.</p>
+      </div>
+    </div>
+    <script type="text/javascript">
+        updateBibtex();
+    </script>
+  </body>
+</html>
