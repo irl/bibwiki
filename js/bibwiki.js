@@ -38,7 +38,7 @@ function getPageDetails(title, callback) {
 }
 
 function nameifyTitle(title) {
-    return title.replace(" ", "_");
+    return title.split(" ").join("_");
 }
 
 function updateBibtex() {
