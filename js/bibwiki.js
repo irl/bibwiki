@@ -50,7 +50,7 @@ function updateBibtex() {
         '   author = "Wikipedia",\n' +
         '   title = "{' + info.title + '} --- {W}ikipedia{,} The Free Encyclopedia",\n' +
         '   year = "' + moment().format('YYYY') + '",\n' +
-        '   howpublished = {\\' + $('#urlpackage').val() + '{http://en.wikipedia.org/w/index.php?title=' + encodeURIComponent(info.title) + '&oldid=' + info.oldid + '}},\n' +
+        '   howpublished = {\\' + $('#urlpackage').val() + '{http://en.wikipedia.org/w/index.php?title=' + encodeURIComponent(info.title).split("%").join("\\%") + '&oldid=' + info.oldid + '}},\n' +
         '   note = "[Online; accessed ' + moment().format('DD-MMMM-YYYY') + ']"\n' +
         ' }');
 
