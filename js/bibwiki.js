@@ -12,7 +12,7 @@ function pageNotFound() {
 }
 
 function followRedirects(title, callback) {
-    var url = 'http://en.wikipedia.org/w/api.php?format=json&callback=?&action=query&redirects&titles=' + title;
+    var url = 'https://en.wikipedia.org/w/api.php?format=json&callback=?&action=query&redirects&titles=' + title;
     $.getJSON(url, function(apiResult){
         var pages = apiResult.query.pages;
         var page = Object.keys(pages)[0];
@@ -25,7 +25,7 @@ function followRedirects(title, callback) {
 }
 
 function getPageDetails(title, callback) {
-    var url = 'http://en.wikipedia.org/w/api.php?format=json&callback=?&action=query&prop=revisions&titles=' + title;
+    var url = 'https://en.wikipedia.org/w/api.php?format=json&callback=?&action=query&prop=revisions&titles=' + title;
     $.getJSON(url, function(apiResult){
         var pages = apiResult.query.pages;
         var page = Object.keys(pages)[0];
