@@ -17,7 +17,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="sticky-footer.css" rel="stylesheet">
+    <link href="css/bibwiki.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,10 +43,16 @@
 
       <!-- Begin page content -->
       <div class="container">
-        <div class="page-header">
-          <h1>Wikipedia BibTeX Generator</h1>
-        </div>
+
+      <header class="header clearfix">
+        <h1>Wikipedia BibTeX Generator</h1>
+      </header>
+
+      <main role="main">
+      <div class="alert alert-warning">
         <p><b>IMPORTANT NOTE:</b> Most educators and professionals do not consider it appropriate to use tertiary sources such as encyclopedias as a sole source for any information—citing an encyclopedia as an important reference in footnotes or bibliographies may result in censure or a failing grade. Wikipedia articles should be used for background information, as a reference for correct terminology and search terms, and as a starting point for further research.</p>
+      </div>
+
         <p class="lead">Enter the Wikipedia URL below: (or use this bookmarklet: <a href="javascript:window.location='https://irl.github.io/bibwiki/?q='+window.location;">BibWiki</a>)</p>
         <p><form role="form">
             <input type="text" value="https://en.wikipedia.org/wiki/Plagiarism" id="input" class="form-control">
@@ -59,15 +65,15 @@
         <h2>Advanced Options</h2>
         <p>Choose URL package to use: <select id="urlpackage" onchange="updateBibtex();"><option value="url">url or hyperref</option><option value="texttt">None</option></select></p>
 
-<a href="https://github.com/irl/bibwiki"><img style="position: absolute; top: 0; left: 0; border: 0;" src="forkme.png" alt="Fork me on GitHub"></a>
-      </div>
-    </div>
+    </main>
 
-    <div id="footer">
-      <div class="container">
+    <footer id="footer">
         <p class="text-muted">&copy; <a href="https://iain.learmonth.me/contact/">Iain R. Learmonth</a> 2013, 2016-2017.</p>
-      </div>
+    </footer>
+
     </div>
+    <a href="https://github.com/irl/bibwiki"><img style="position: absolute; top: 0; left: 0; border: 0;" src="forkme.png" alt="Fork me on GitHub"></a>
+
     <script type="text/javascript">
         $("#input").val($.QueryString['q'] || "https://en.wikipedia.org/wiki/Plagiarism");
         updateBibtex();
