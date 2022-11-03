@@ -32,3 +32,10 @@ or bibliographies may result in censure or a failing grade. Wikipedia
 articles should be used for background information, as a reference for
 correct terminology and search terms, and as a starting point for
 further research.
+
+## Inspired projects
+
+Others have written other versions of this using other frameworks, here's
+a selection:
+
+* https://github.com/karlosos/url_to_bibtex (React)
