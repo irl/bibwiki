@@ -62,6 +62,7 @@
             <textarea id="output" class="form-control" rows="10"></textarea>
            </form>
         <p id="sample"></p>
+        <input type="text" id='copy-btn' onclick="copyBibtex(); this.blur();" class="btn btn-primary" value="Copy" style="width:100%; cursor:pointer;">
         <h2>Advanced Options</h2>
         <p>Choose URL package to use: <select id="urlpackage" onchange="updateBibtex();"><option value="url">url or hyperref</option><option value="texttt">None</option></select></p>
 

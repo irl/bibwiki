@@ -61,6 +61,11 @@ function updateBibtex() {
     });
 }
 
+function copyBibtex() {
+    var content = $('#output').val();
+    navigator.clipboard.writeText(content);
+}
+
 // The following is from http://stackoverflow.com/a/3855394
 
 (function($) {
