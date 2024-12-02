@@ -57,7 +57,7 @@
         <p><form role="form">
             <input type="text" value="https://en.wikipedia.org/wiki/Plagiarism" id="input" class="form-control">
             <br>
-            <input onclick="updateBibtex();" class="btn btn-success" value="Go!" style="width:100%;">
+            <input onclick="updateBibtex(); this.blur();" class="btn btn-success" value="Go!" style="width:100%; cursor:pointer;">
             <br><br>
             <textarea id="output" class="form-control" rows="10"></textarea>
            </form>
