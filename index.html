@@ -54,10 +54,10 @@
       </div>
 
         <p class="lead">Enter the Wikipedia URL below: (or use this bookmarklet: <a href="javascript:window.location='https://irl.github.io/bibwiki/?q='+window.location;">BibWiki</a>)</p>
-        <p><form role="form">
+        <p><form role="form" onsubmit="event.preventDefault(); updateBibtex(); return false;">
             <input type="text" value="https://en.wikipedia.org/wiki/Plagiarism" id="input" class="form-control">
             <br>
-            <input onclick="updateBibtex(); this.blur();" class="btn btn-success" value="Go!" style="width:100%; cursor:pointer;">
+            <input type="submit" class="btn btn-success" value="Go!" style="width:100%; cursor:pointer;">
             <br><br>
             <textarea id="output" class="form-control" rows="10"></textarea>
            </form>
